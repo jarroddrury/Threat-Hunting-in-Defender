@@ -1,0 +1,19 @@
+DeviceProcessEvents
+| where FileName in (
+    "NPE.exe", "spybotsd-2.9.85.5.exe", "EmsisoftEmergencyKit.exe", "MBSetup-5.5.exe", "TotalAV.exe", 
+    "ImmunetSetup.exe", "adawarewebinstaller.exe", "ZoneAlarmNGSetup_ZAN3_FREE_79JXW1.exe", 
+    "cispro_installer.exe", "PANDAFREEAV.exe", "startup.exe", "bitdefender_avfree.exe", 
+    "avira_en_sptl1_1313091185-1688650571_ws-spotlight-release", "avg_antivirus_free_setup.exe", 
+    "avast_free_antivirus_setup_online.exe", "mcshield.exe", "Norton.exe", "NortonSecurity.exe", 
+    "SUPERAntiSpyware.exe", "SpybotSD.exe", "SSScheduler.exe", "HousecallLauncher.exe", "HitmanPro.exe", 
+    "CylanceUI.exe", "OnlineScannerApp.exe", "AvastUI.exe", "Avira.Systray.exe", "ImmunetProtect.exe", 
+    "TotalAV.exe", "ClamTray.exe", "zatray.exe", "PSANHost.exe", "SophosUI.exe", "avpui.exe", "bdagent.exe", 
+    "Avira.Systray.exe", "TmPfw.exe", "TiMiniService.exe", "fsav.exe", "fsav32.exe", "BullGuard.exe", 
+    "WRSA.exe", "SBAMTray.exe", "AVKTray.exe", "AVK.exe", "TPAvConsole.exe", "TPAvEngine.exe", "V3Main.exe", 
+    "spideragent.exe", "pcmatic.exe", "drweb32w.exe", "vsmon.exe", "zlclient.exe", "outpost.exe", 
+    "FProtTray.exe", "FPAVServer.exe", "avgui.exe", "AvastUI.exe", "egui.exe", "McSvHost.exe", "N360.exe", 
+    "NS.exe", "SophosEndpointAgent.exe", "bdredline.exe", "PSANHost.exe", "PandaSecurityTskMngr.exe", 
+    "safensecure.exe", "safensecure64.exe", "SBAMSvc.exe", "SBAMTray.exe", "AvastSvc.exe", "avgscanx.exe", 
+    "uiwinmgr.exe", "avp.exe", "tmrpt.exe", "cis.exe", "cistray.exe", "quickup.exe", "scanningtool.exe"
+    )
+| summarize count() by DeviceId, FileName
