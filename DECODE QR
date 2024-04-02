@@ -1,0 +1,28 @@
+"""
+USAGE GUIDE
+------------
+note: Run all cells sequentially to ensure that your environment is working correctly
+
+"""
+
+%pip install pyzbar
+%pip install pillow
+%pip install ipyfilechooser
+%pip install pathlib
+
+from pyzbar.pyzbar import decode
+from PIL import Image
+from ipyfilechooser import FileChooser
+from pathlib import Path
+
+
+fc = FileChooser('/')
+
+display(fc)
+
+
+input_qr = Path(fc.selected)
+
+
+decodeQR = decode(Image.open(input_qr))
+print(decodeQR[0].data.decode('ascii'))
