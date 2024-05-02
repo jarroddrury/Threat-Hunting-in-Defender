@@ -1,9 +1,3 @@
-"""
-USAGE GUIDE
-------------
-note: Run all cells sequentially to ensure that your environment is working correctly
-
-"""
 
 %pip install pyzbar
 %pip install pillow
